@@ -1,0 +1,26 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+    double mealCost = 12;
+    int tipPercent = 20;
+    int taxPercent = 8;
+
+    scanf("%lf", &mealCost);
+    scanf("%d", &tipPercent);
+    scanf("%d", &taxPercent);
+    
+    double tip = mealCost * tipPercent / 100;
+    double tax = mealCost * taxPercent / 100;
+    int totalCost = (int) round(mealCost + tip + tax);
+    
+    printf("%d", totalCost);
+    
+    return 0;
+}
