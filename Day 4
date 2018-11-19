@@ -3,26 +3,41 @@ using namespace std;
 
 class Person{
     public:
-        int age;
+        int age,i;
         Person(int initialAge);
         void amIOld();
         void yearPasses();
     };
 
-    Person::Person(int initialAge){
-        // Add some more code to run some checks on initialAge
-
+    Person::Person(int initialAge)
+    {
+        i=0;
+        if(initialAge<0)
+    {
+    cout<<"Age is not valid, setting age to 0.\n";
+        age=0;
+}
+     age=initialAge+i;
     }
 
-    void Person::amIOld(){
-        // Do some computations in here and print out the correct statement to the console 
-
+    void Person::amIOld()
+    {
+        if(age+i<13)
+    cout<<"You are young.\n";
+        else
+        {
+        if(13<=age+i&&age+i<18)
+    cout<<"You are a teenager.\n";
+        else
+            cout<<"You are old.\n";
+        }
+    }
+    void Person::yearPasses()
+    {
+        i++;
     }
 
-    void Person::yearPasses(){
-        // Increment the age of the person in here
 
-    }
 
 int main(){
     int t;
